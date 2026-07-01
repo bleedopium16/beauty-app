@@ -1,0 +1,219 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 30px;
+  background-color: white;
+}
+
+.logo {
+  font-family: "Satisfy", cursive;
+  font-size: 40px;
+  font-weight: 500;
+  color: rgb(182, 133, 9);
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menu span {
+  width: 55px;
+  height: 2px;
+  background-color: #705d58;
+}
+
+
+.menu-popup {
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 150px;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: dropdown 0.3s ease forwards;
+}
+
+/* Animation */
+@keyframes dropdown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.menu-popup p {
+  margin: 10px 0;
+  cursor: pointer;
+  color: #333;
+  transition: 0.2s;
+}
+
+.menu-popup p:hover {
+  color: #000;
+  transform: translatex(5px);
+}
+
+.menu-popup a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu-greeting {
+  font-weight: 600;
+  color: #c08497;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+  margin-bottom: 4px;
+}
+
+.menu-action {
+  cursor: pointer;
+  margin: 0;
+}
+
+.menu-action:hover {
+  color: #c08497;
+}
+
+.menu-wrap {
+  position: relative;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  background: #fdf0f4;
+  border: 1px solid #f0d9e2;
+  border-radius: 999px;
+  padding: 4px 6px 4px 14px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.search-form:focus-within {
+  border-color: #c08497;
+  box-shadow: 0 0 0 3px rgba(192, 132, 151, 0.12);
+}
+
+.search-form input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 0.9rem;
+  width: 150px;
+  color: #444;
+}
+
+.search-form input::placeholder {
+  color: #c89bab;
+}
+
+.search-form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  background: #c08497;
+  color: #fff;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.search-form button svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* On small screens, let the search shrink gracefully */
+@media (max-width: 600px) {
+  .search-form input {
+    width: 90px;
+  }
+}
+
+.logout-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.logout-box {
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px 28px;
+  width: 90%;
+  max-width: 340px;
+  text-align: center;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+}
+
+.logout-box h3 {
+  margin: 0 0 8px;
+  font-size: 1.3rem;
+}
+
+.logout-box p {
+  color: #888;
+  margin: 0 0 24px;
+}
+
+.logout-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.logout-actions button {
+  flex: 1;
+  padding: 11px 0;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.2s, background 0.2s;
+}
+
+.logout-cancel {
+  background: #f0e6ea;
+  color: #88566a;
+}
+
+.logout-cancel:hover {
+  background: #e8d8df;
+}
+
+.logout-confirm {
+  background: #c08497;
+  color: #fff;
+}
+
+.logout-confirm:hover {
+  opacity: 0.9;
+}
