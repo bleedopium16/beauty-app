@@ -1,16 +1,58 @@
-# React + Vite
+# Veloure
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack beauty e-commerce store with a polished, animation-rich frontend.  
+Built with React, Vite, and React Router.
 
-Currently, two official plugins are available:
+**Live site:** [add your Netlify link here after deploying]  
+**Backend API:** [veloure-api](https://github.com/bleedopium16/veloure-api)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Luxury intro animation** — animated gold "Veloure" logo reveal on first visit
+- **Product catalog** — browse makeup, skincare, and haircare, plus featured bestsellers
+- **Search** — find products by name from the navbar
+- **Authentication** — register and log in, with sessions persisted across refreshes
+- **Cart** — add, remove, and adjust quantities; persisted per user
+- **Wishlist** — save favorite products with a tap
+- **Orders** — checkout and view full order history
+- **Polished UX** — toast notifications, loading skeletons, and premium empty states
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+- **React 19** + **Vite**
+- **React Router** — client-side routing
+- **Context API** — auth, cart, wishlist, and toast state
+- **CSS** — custom styling and animations
+- **JWT** — token-based auth (stored in localStorage)
+
+The backend (Node, Express, MongoDB) lives in a separate repo: [veloure-api](https://github.com/bleedopium16/veloure-api)
+
+---
+
+## Local Setup
+
+### 1. Install
+```bash
+npm install
+```
+
+### 2. Environment
+Create a `.env` file pointing at your backend:
+
+### 3. Run
+```bash
+npm run dev
+```
+The app runs on http://localhost:5173 (requires the backend running separately).
+
+---
+
+## Building for Production
+```bash
+npm run build
+```
+Set `VITE_API_URL` to your deployed backend URL in your hosting provider's environment settings.
