@@ -3,7 +3,7 @@
 A full-stack beauty e-commerce store with a polished, animation-rich frontend.  
 Built with React, Vite, and React Router.
 
-**Live site:** [add your Netlify link here after deploying]  
+**Live site:** [https://veloure-beauty.netlify.app/]  
 **Backend API:** [veloure-api](https://github.com/bleedopium16/veloure-api)
 
 ---
